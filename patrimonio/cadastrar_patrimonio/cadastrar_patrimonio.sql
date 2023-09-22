@@ -1,7 +1,3 @@
--- FUNCTION: SCH.cadastrar_patrimonio(integer, integer, character varying, integer, integer)
-
--- DROP FUNCTION IF EXISTS "SCH".cadastrar_patrimonio(integer, integer, character varying, integer, integer);
-
 CREATE OR REPLACE FUNCTION "SCH".cadastrar_patrimonio(
 	cd_produto integer,
 	mat_responsavel integer,
@@ -140,13 +136,3 @@ BEGIN
 	end loop;
 END;
 $BODY$;
-
-ALTER FUNCTION "SCH".cadastrar_patrimonio(integer, integer, character varying, integer, integer)
-    OWNER TO postgres;
-
-GRANT EXECUTE ON FUNCTION "SCH".cadastrar_patrimonio(integer, integer, character varying, integer, integer) TO PUBLIC;
-
-GRANT EXECUTE ON FUNCTION "SCH".cadastrar_patrimonio(integer, integer, character varying, integer, integer) TO "SELECT_GROUP";
-
-GRANT EXECUTE ON FUNCTION "SCH".cadastrar_patrimonio(integer, integer, character varying, integer, integer) TO postgres;
-
